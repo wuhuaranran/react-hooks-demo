@@ -10,6 +10,7 @@ import CallbackDemo from "./pages/useCallback";
 import MemoDemo from "./pages/useMemo";
 import RefDemo from "./pages/useRef";
 import LayoutEffectDemo from "./pages/useLayoutEffect";
+import SelfHooksDemo from "./pages/selfHooks";
 import "./App.css";
 
 export default function BasicExample() {
@@ -45,6 +46,9 @@ export default function BasicExample() {
             </Route>
             <Route path="/layoutEffect">
               <LayoutEffectDemo />
+            </Route>
+            <Route path="/selfHoosk">
+              <SelfHooksDemo />
             </Route>
           </Switch>
         </div>

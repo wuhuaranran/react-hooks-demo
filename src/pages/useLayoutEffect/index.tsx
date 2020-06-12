@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
-import ReactDOM from 'react-dom';
 
 function Com() {
     useEffect(() => {

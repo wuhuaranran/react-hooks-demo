@@ -21,6 +21,8 @@ const Menu = () => {
         path: '/memo', title: "useMemo demo"
     }, {
         path: '/layoutEffect', title: "useLayoutEffect demo"
+    }, {
+        path: '/selfHoosk', title: "自定义Hooks demo"
     }];
     const [current, setCurrent] = useState(0);
     const changeMenu = (index: number) => {

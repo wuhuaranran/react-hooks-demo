@@ -1,6 +1,5 @@
 import React, { useMemo } from "react";
 
-
 const useSelfHooks = ({ name, content }: any) => {
     const changeName = (name: string) => {
         console.log('changeName')
