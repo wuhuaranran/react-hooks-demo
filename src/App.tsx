@@ -10,41 +10,44 @@ import CallbackDemo from "./pages/useCallback";
 import MemoDemo from "./pages/useMemo";
 import RefDemo from "./pages/useRef";
 import LayoutEffectDemo from "./pages/useLayoutEffect";
+import "./App.css";
 
 export default function BasicExample() {
   return (
     <BrowserRouter>
-      <div>
+      <div className="App">
         <Menu />
-        <Switch>
-          <Route exact path="/">
-            <Basic />
-          </Route>
-          <Route path="/state">
-            <StateDemo />
-          </Route>
-          <Route path="/effect">
-            <EffectDemo />
-          </Route>
-          <Route path="/context">
-            <ContextDemo />
-          </Route>
-          <Route path="/reducer">
-            <ReducerDemo />
-          </Route>
-          <Route path="/callback">
-            <CallbackDemo />
-          </Route>
-          <Route path="/memo">
-            <MemoDemo />
-          </Route>
-          <Route path="/ref">
-            <RefDemo />
-          </Route>
-          <Route path="/layoutEffect">
-            <LayoutEffectDemo />
-          </Route>
-        </Switch>
+        <div className="page">
+          <Switch>
+            <Route exact path="/">
+              <Basic />
+            </Route>
+            <Route path="/state">
+              <StateDemo />
+            </Route>
+            <Route path="/effect">
+              <EffectDemo />
+            </Route>
+            <Route path="/context">
+              <ContextDemo />
+            </Route>
+            <Route path="/reducer">
+              <ReducerDemo />
+            </Route>
+            <Route path="/callback">
+              <CallbackDemo />
+            </Route>
+            <Route path="/memo">
+              <MemoDemo />
+            </Route>
+            <Route path="/ref">
+              <RefDemo />
+            </Route>
+            <Route path="/layoutEffect">
+              <LayoutEffectDemo />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </BrowserRouter>
   );

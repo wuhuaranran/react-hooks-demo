@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 
@@ -22,9 +22,22 @@ const Menu = () => {
     }, {
         path: '/layoutEffect', title: "useLayoutEffect demo"
     }];
+    const [current, setCurrent] = useState(0);
+    const changeMenu = (index: number) => {
+        setCurrent(index);
+    }
     return (
         <ul className="menu">
-            {menuList.map(menu => <li key={menu.path}><Link to={menu.path}>{menu.title}</Link></li>)}
+            {menuList.map((menu: any, index: number) =>
+                <li
+                    key={index}
+                    onClick={() => { changeMenu(index) }}
+                    className={index === current ? 'current' : ''}
+                >
+                    <Link to={menu.path}>
+                        {menu.title}
+                    </Link>
+                </li>)}
         </ul>
     )
 }
