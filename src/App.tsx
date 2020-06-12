@@ -9,7 +9,7 @@ import ReducerDemo from "./pages/useReducer";
 import CallbackDemo from "./pages/useCallback";
 import MemoDemo from "./pages/useMemo";
 import RefDemo from "./pages/useRef";
-import ImperativeHandleDemo from "./pages/useImperativeHandle";
+import LayoutEffectDemo from "./pages/useLayoutEffect";
 
 export default function BasicExample() {
   return (
@@ -40,8 +40,9 @@ export default function BasicExample() {
           </Route>
           <Route path="/ref">
             <RefDemo />
-          </Route><Route path="/imperativeHandleDemo">
-            <ImperativeHandleDemo />
+          </Route>
+          <Route path="/layoutEffect">
+            <LayoutEffectDemo />
           </Route>
         </Switch>
       </div>

@@ -20,7 +20,7 @@ const Menu = () => {
     }, {
         path: '/memo', title: "useMemo demo"
     }, {
-        path: '/imperativeHandleDemo', title: "useImperativeHandle demo"
+        path: '/layoutEffect', title: "useLayoutEffect demo"
     }];
     return (
         <ul className="menu">

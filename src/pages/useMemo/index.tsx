@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import useSelfHooks from "./useSelfHooks";
 
 const Child = ({ name, content }: any) => {
     function changeName(name: string) {
@@ -20,12 +21,14 @@ const Child = ({ name, content }: any) => {
 function MemoDemo() {
     const [name, setName] = useState('名称')
     const [content, setContent] = useState('内容')
-
+    const selfHooks = useSelfHooks({ name, content });
     return (
         <>
             <button onClick={() => setName(c => c + ' -1 ')}>change name</button>
             <button onClick={() => setContent(c => c + " 内容 ")}>change content</button>
             <Child name={name} content={content}></Child>
+            <hr />
+            <div>以下是自定义Hooks组件{selfHooks}</div>
         </>
     )
 }
