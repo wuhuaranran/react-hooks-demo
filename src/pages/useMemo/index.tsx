@@ -25,7 +25,7 @@ function MemoDemo() {
         <>
             <button onClick={() => setName(c => c + ' -1 ')}>change name</button>
             <button onClick={() => setContent(c => c + " 内容 ")}>change content</button>
-            <Child name={name}>{content}</Child>
+            <Child name={name} content={content}></Child>
         </>
     )
 }

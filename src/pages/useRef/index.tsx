@@ -18,7 +18,7 @@ const useRefDemo = () => {
     useEffect(() => {
         console.log('time', time);
         renderFirst.current = false;
-    }, [])
+    }, [time])
     console.log(renderFirst);
     return (
         <>

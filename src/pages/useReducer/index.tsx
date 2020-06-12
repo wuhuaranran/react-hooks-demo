@@ -1,4 +1,4 @@
-import React, { useReducer, useState, useEffect } from "react";
+import React, { useReducer } from "react";
 
 interface IState {
     count: number;
@@ -27,14 +27,7 @@ const reducer = (state: IState, action: any) => {
 
 const useReducerDemo = () => {
     const [state, dispatch] = useReducer(reducer, initialCount, init);
-    const [num, setNum] = useState(0);
 
-
-    useEffect(() => {
-        if (state.count === 103) {
-            setNum(103);
-        }
-    }, [state])
     return (
         <div>
             <div>Count: {state.count}</div>

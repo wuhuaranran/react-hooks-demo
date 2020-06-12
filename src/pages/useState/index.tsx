@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useDebugValue } from "react";
+import React, { useState, useEffect } from "react";
 
 const StateDemo = () => {
     const [count, setCount] = useState(2);
@@ -34,7 +34,6 @@ const StateDemo = () => {
         // })
     }
     console.log('render');
-    // useDebugValue("my debug text");
     return (
         <div style={{ height: "110vh" }}>
             <p>You clicked {count} times</p>
