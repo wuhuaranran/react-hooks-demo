@@ -27,7 +27,8 @@ const reducer = (state: IState, action: any) => {
 
 const useReducerDemo = () => {
     const [state, dispatch] = useReducer(reducer, initialCount, init);
-
+    // dispatch(action) <=> reducer(state, action)
+    // 初始化state <=> init(initialCount)
     return (
         <div>
             <div>Count: {state.count}</div>
