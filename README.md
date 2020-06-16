@@ -1,5 +1,5 @@
 # react-hooks-demo
-一些学习React Hooks的demo
+一些学习React Hooks的[Demo](https://wuhuaranran.github.io/react-hooks-demo/build/)
 
 Hook 是一些可以让你在函数组件里“钩入” React state 及生命周期等特性的函数。
 
@@ -17,12 +17,12 @@ Hook 是一些可以让你在函数组件里“钩入” React state 及生命�
 
    其他 Hooks：useReducer，useCallback，useMemo，useRef，useLayoutEffect，useImperativeHandle，useDebugValue
 
-- ####useState：
+- #### useState：
   跳过 state 更新：调用 State Hook 的更新函数并传入当前的 state 时，React 将跳过子组件的渲染及 effect 的执行。React使用Object.js()对比state是否更新；  
   把所有 state 都放在同一个 useState 调用中，或是每一个字段都对应一个 useState 调用，这两方式都能跑通。当你在这两个极端之间找到平衡，然后把相关 state 组合到几个独立的 state 变量时，组件就会更加的可读。
   如果 state 的逻辑开始变得复杂，我们推荐 用 reducer 来管理它，或使用自定义 Hook。  
   
-- ####useEffect：
+- #### useEffect：
   >**副作用**
   >
   >数据获取，设置订阅以及手动更改 React 组件中的 DOM 都属于副作用。
@@ -49,17 +49,17 @@ Hook 是一些可以让你在函数组件里“钩入” React state 及生命�
   2. useReducer 把 state 更新逻辑移到 effect 之外
   3. useRef 保存一个变量，然后对它进行读写
   
-- ####useLayoutEffect
+- #### useLayoutEffect
   在浏览器完成布局与绘制之后，会在新一次的渲染之前，延迟调用useEffect。
   然而，并非所有 effect 都可以被延迟执行。例如，在浏览器执行下一次绘制前，用户可见的 DOM 变更就必须同步执行，这样用户才不会感觉到视觉上的不一致。（概念上类似于被动监听事件和主动监听事件的区别。）
   useLayoutEffect会在DOM更新之后，浏览器执行绘制之前，同步调用effect，读取 DOM 布局并同步触发重渲染。
   
-- ####useContext
+- #### useContext
   接收一个 context 对象（React.createContext 的返回值）并返回该 context 的当前值。
   当前的 context 值由上层组件中距离当前组件最近的 <MyContext.Provider> 的 value prop 决定。
   子组件在 context 值变化时重新渲染。
   
-- ####useReducer
+- #### useReducer
   useState 的进阶版。
   使用useReducer替代useState的情况：
   
@@ -67,11 +67,11 @@ Hook 是一些可以让你在函数组件里“钩入” React state 及生命�
   2. 下一个 state 依赖于之前的 state 
   3. 给会触发深更新的组件做性能优化，因为你可以向子组件传递 dispatch 而不是回调函数 。
   
-- ####useCallback
+- #### useCallback
   返回一个 memoized 回调函数。useCallback(fn, deps) 相当于 useMemo(() => fn, deps)。
   当回调函数作为依赖传递给其他Hooks函数（useEffect）时使用。
   
-- ####useMemo
+- #### useMemo
   通过记住上一次计算结果的方式在多次渲染的之间缓存计算结果，返回一个 memoized 值。
   传给 useMemo 的函数是在渲染期间运行的。（依赖值改变时运行）
 用处：
@@ -83,7 +83,7 @@ Hook 是一些可以让你在函数组件里“钩入” React state 及生命�
 
 
 
-- ####useRef
+- #### useRef
   useRef 返回一个可变的 ref 对象，其 .current 属性被初始化为传入的参数（initialValue）。
   返回的 ref 对象在组件的整个生命周期内保持不变。
   当 ref 对象内容发生变化时，即变更 .current 属性不会引发组件重新渲染。如果想要在 React 绑定或解绑 DOM 节点的 ref 时运行某些代码，则需要使用回调 ref 来实现。
