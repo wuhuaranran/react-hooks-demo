@@ -109,6 +109,8 @@ Hook 是一些可以让你在函数组件里“钩入” React state 及生命�
 - React 使用 Object.is 比较算法 来比较 state。  
 - Hook 能否覆盖 class 的所有使用场景？
 目前暂时还没有对应不常用的 getSnapshotBeforeUpdate，getDerivedStateFromError 和 componentDidCatch 生命周期的 Hook 等价写法。  
+- demo github地址：https://github.com/wuhuaranran/react-hooks-demo
+- 在线demo地址：https://stackblitz.com/edit/react-hooks-demo2
 
 ### 6. 问题
 
